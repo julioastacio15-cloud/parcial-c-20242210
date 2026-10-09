@@ -1,3 +1,13 @@
+/***********************************************************/
+/*           Programación para mecatrónicos               */
+/*  Nombre:    Julio Peguero Astacio                                  */
+/*  Matricula: 20242210                                               */
+/*  Seccion:   Sabados                                              */
+/*  Practica:  Primer parcial individual - Reto 08                                     */
+/*  Fecha:     9/10/2026                                              */                       
+/* Link Practica: https://github.com/julioastacio15-cloud/parcial-c-20242210          */
+/***********************************************************/
+
 #include <stdio.h>
 
 int main(void) {
