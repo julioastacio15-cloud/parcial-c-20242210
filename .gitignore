@@ -1,0 +1,7 @@
+*.exe
+*.o
+*.obj
+a.out
+Thumbs.db
+.DS_Store
+.env
