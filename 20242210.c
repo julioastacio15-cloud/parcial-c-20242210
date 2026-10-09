@@ -54,13 +54,17 @@ int main(void) {
             int inicio_racha_maxima = 0;
 
             for (j = 0; j < m; j++) {
+/* Hay evento desde la segunda columna si el valor anterior > U y el actual <= L. */
                 int evento = (j >= 1 &&
                               inventario[i][j - 1] > u &&
                               inventario[i][j] <= l);
+
+/* El impacto es anterior - actual solo cuando hay evento; en otro caso es 0. */
                 int impacto = evento
                     ? inventario[i][j - 1] - inventario[i][j]
                     : 0;
 
+/* El primer evento inicia la racha; una posición sin evento la interrumpe. */
                 if (evento) {
                     cantidad++;
                     impacto_total += impacto;
@@ -117,6 +121,7 @@ int main(void) {
 
             /* El uso de > conserva la columna menor en caso de empate. */
             for (j = 1; j < m; j++) {
+/* Con >, los empates conservan la columna de número menor. */
                 if (eventos_columna[j] >
                     eventos_columna[columna_destacada]) {
                     columna_destacada = j;
